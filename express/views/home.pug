@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  //- JAS- so here's my thing. I cannot stand Pug's terse and ambiguous syntax. I love
+  //- the features it provides, and templating is a must, but i prefer explicit html, sorry.
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="/style/lib/skeleton/css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/lib/skeleton/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/css/main.css"/>
+
+    <script src="/js/lib/jquery/jquery-3.2.0.min.js"></script>
+    <script src="/js/lib/moment/moment.js"></script>
+    <script src="/js/src/app.js"></script>
+
+  </head>
+  <body>
+    <form id="new-todo" action="/todo" method="POST">
+      <h2>New ToDo</h2>
+      <input type="text" name="title" value="" title="name your todo" placeholder="name your todo"/>
+      <input type="date" name="due_date" value="" title="due date"/>
+      <input type="submit" value="Go!" />
+    </form>
+    <h2>Current ToDo's</h2>
+    <div class="todolist">
+    </div>
+  </body>
+</html>

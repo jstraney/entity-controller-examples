@@ -1,0 +1,25 @@
+{
+  "name": "entity-controller-examples",
+  "version": "1.0.0",
+  "description": "examples for using entity-controller",
+  "main": "index.js",
+  "scripts": {
+    "test-express": "cd express && node index.js"
+  },
+  "keywords": [
+    "test",
+    "entity-controller",
+    "controller",
+    "entity"
+  ],
+  "author": "Jeff Straney <straneyjeff@gmail.com> (http://www.orlandowebspecialist.com)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "entity-controller": "1.0.6",
+    "express": "4.16.2",
+    "moment": "2.20.1",
+    "mongoose": "5.0.6",
+    "pug": "2.0.0-rc.4"
+  }
+}

@@ -1,0 +1,91 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*apply same style to date that skeleton do*/
+input[type=date] {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+label[for=done] {
+  display: inline;
+}
+
+.todo {
+  margin: 10px auto;
+  padding: 20px 10px 75px;
+  border-bottom: 1px solid #AAAAAA;
+  position: relative;
+  top: 50px;
+  -webkit-transition: top .5s, opacity .5s;
+  -moz-transition: top .5s, opacity .5s;
+  transition: top .5s, opacity .5s;
+  opacity: 0;
+}
+
+.todo.loaded {
+  top: 0px;
+  opacity: 1;
+}
+
+.field.title {
+  margin-bottom: 1rem;
+}
+
+
+form#new-todo {
+  padding: 0 10px;
+}
+
+form.update-todo {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+form.delete-todo {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+input[type=checkbox] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #AAA;
+  margin: 0 .5em;
+  border-radius: 2px;
+}
+
+input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background-color: #CDCDCD;
+}
+
+@media screen and (max-width: 680px) {
+
+  form#new-todo input {
+    display: block; 
+    width: 100%;
+    max-width: none;
+    margin: 10px 0;
+  }
+
+}
