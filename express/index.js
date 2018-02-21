@@ -17,7 +17,7 @@ const todo_controller = require('./controller');
 // site index. single page app
 app.get('/', async function (req, res) {
 
-  res.render('home.pug', {todos: todos});
+  res.render('home.pug');
 
 });
 
