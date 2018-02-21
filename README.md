@@ -37,6 +37,6 @@ npm install
 npm scripts have been provided to run examples. To run the express example, make sure you
 have mongo running in the background and do the following:
 ```sh
-npm run express-test
+npm run test-express
 ```
 this should start a 'todo list' app on port 3000.
