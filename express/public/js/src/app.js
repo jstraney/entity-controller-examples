@@ -38,7 +38,18 @@ $(function () {
       }
 
       $.ajax(ajax_options)
-      .then(on_response);
+      .then(on_response)
+      .catch(function (err) {
+
+         console.error(err); 
+
+      });
+
+      window.setTimeout(function () {
+
+        $this.removeClass('done'); 
+
+      }, 3000);
 
     });
 
@@ -77,6 +88,18 @@ $(function () {
 
     }
 
+
+  }
+
+  function indicate_saved ($elem) {
+
+    $elem.addClass('saved');
+
+    window.setTimeout(function () {
+
+      $elem.removeClass('saved');
+
+    }, 3000);
 
   }
 
@@ -137,7 +160,10 @@ $(function () {
     $form.append($_id, $done_label, $done, $submit);
 
     $form.ajaxify_form({
-      on_response: fetch_todos
+      on_response: function () {
+        indicate_saved($todos);
+        fetch_todos();
+      }
     });
 
     return $form;

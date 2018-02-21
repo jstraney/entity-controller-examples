@@ -18,6 +18,29 @@ label[for=done] {
   display: inline;
 }
 
+.todolist {
+  position: relative;
+}
+
+@keyframes flyup {
+  0% {top: 20px; opacity: 0}
+  40% {top: 5px; opacity: 1}
+  60% {top: -5px; opacity: 1}
+  100% {top: -20px; opacity: 0}
+}
+
+.todolist.saved:after {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  animation: flyup;
+  animation-duration: 3s;
+  font-weight: 600;
+  font-size: 18px;
+  content: "Saved";
+  color: #22DD55;
+}
+
 .todo {
   margin: 10px auto;
   padding: 20px 10px 75px;
