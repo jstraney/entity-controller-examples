@@ -191,7 +191,15 @@ $(function () {
     $form.append($_id, $submit);
 
     $form.ajaxify_form({
-      on_response: fetch_todos
+      on_response: function () {
+
+        var $todo = $form.parent();
+
+        $todo.removeClass('loaded');
+
+        window.setTimeout(function () { $todo.remove() }, 1000);
+
+      } 
     });
 
     return $form;
